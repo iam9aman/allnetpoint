@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { context } from './context/context';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub, FaHome, FaInfo, FaServicestack, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
@@ -31,18 +32,15 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
+          <Link to="/" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
             <FaHome className="mr-1 sm:mr-2" /> Home
-          </a>
-          <a href="#about" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
+          </Link>
+          <Link to="/about" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
             <FaInfo className="mr-1 sm:mr-2" /> About
-          </a>
-          <a href="#services" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
-            <FaServicestack className="mr-1 sm:mr-2" /> Services
-          </a>
-          <a href="#contact" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
+          </Link>
+          <Link to="/contact" className="flex items-center mx-2 hover:underline hover:text-blue-500 transition-all duration-300">
             <FaEnvelope className="mr-1 sm:mr-2" /> Contact
-          </a>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -51,21 +49,21 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-all duration-300">
+          <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-all duration-300">
             <FaFacebookF />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-all duration-300">
+          </Link>
+          <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-all duration-300">
             <FaTwitter />
-          </a>
-          <a href="https://instagram.com/all_netcafe" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-all duration-300">
+          </Link>
+          <Link to="https://instagram.com/all_netcafe" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-all duration-300">
             <FaInstagram />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition-all duration-300">
+          </Link>
+          <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition-all duration-300">
             <FaLinkedinIn />
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition-all duration-300">
+          </Link>
+          <Link to="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition-all duration-300">
             <FaGithub />
-          </a>
+          </Link>
         </motion.div>
       </div>
 
