@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* navbar css */
+body{
+  background: linear-gradient(135deg, #360836, #081f36);
+}
+.custom-navbar {
+    background: linear-gradient(135deg, #f2b5f2, #97bee4);
+    color:white
+}
+
+
+.custom-home {
+  background: linear-gradient(135deg, #ecc1ec, #c5dff9);
+}
+.custom-home-dark {
+  background: linear-gradient(135deg, #360836, #081f36);
+}
+.menu {
+  transition: opacity 0.3s ease, height 0.3s ease;
+  opacity: 0;
+  height: 0;
+  padding-top: 2px;
+  overflow: hidden;
+  display: flex; /* Ensure the menu uses flexbox layout */
+  flex-direction: column; /* Default direction for mobile view */
+}
+
+.menu-open {
+  opacity: 1;
+  height: auto; /* Auto height to fit content */
+}
+
+@media (min-width: 768px) { /* Adjust this breakpoint as needed */
+  .menu {
+    opacity: 1;
+    height: auto; /* Ensure height is auto for large screens */
+    overflow: visible; /* Allow overflow on larger screens */
+    flex-direction: row; /* Change direction to row for larger screens */
+    align-items: center;
+    gap: 35px;
+  }
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotatePause {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes MenuPause {
+  from {
+    translate: 15vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0vw 0;
+    scale: 100% 1;
+  }
+}
+
+/* Class to apply rotation animation */
+.rotate-icon {
+  animation: rotatePause 3s linear infinite; /* Rotate and pause over 3 seconds */
+  animation-delay: 1s;
+}
+.rotate-iconMenu {
+  animation: MenuPause .5s linear ; /* Rotate and pause over 3 seconds */
+}
+/* Ensure the menu icon has the proper base styling */
+
+@keyframes endball {
+  0% {
+    transform: translateX(10vw);
+  }
+  50% {
+    transform: translateX(75vw); /* Adjust the value to control the distance traveled */
+  }
+  100% {
+    transform: translateX(10vw);
+  }
+}
+
+.lastball {
+  animation: endball 4s linear infinite ; /* Rotate and pause over 3 seconds */
+}
+/* footer style */
+footer {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+
+/* Home style */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+}
+
+
