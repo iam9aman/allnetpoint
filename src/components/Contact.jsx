@@ -86,7 +86,7 @@ ScrollToTop()
           </div>
           <div className='flex items-center mb-4'>
             <FaMapMarkerAlt className={`text-xl ${accentColor} mr-3`} />
-            <p className='text-lg'> Hoshiarpur, Punjab.</p>
+            <p className='text-lg'> Hoshiarpur, Punjab, 144205.</p>
           </div>
 
           {/* Phone Number */}
