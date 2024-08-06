@@ -67,7 +67,7 @@ function HomeCard() {
           <div className="flex items-center gap-4">
             <img src={social} className='w-24 h-24' alt="Digital Marketing Services" />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Digital Marketing, <span className='text-2xl text-green-600 font-bold'>VISA Consultancy</span> and More...</p>
+              <p className="text-lg font-semibold pr-2">Digital Marketing, <span className='text-xl text-green-600 font-bold'>VISA Consultancy</span> and More...</p>
               <Link
                 to="/services"
                 className="mt-2 inline-block px-4 py-2 bg-blue-500 text-white rounded-lg text-center shadow hover:bg-blue-600 transition"
