@@ -115,7 +115,7 @@ function Navbar(prop) {
         animate={navbarControls}
       >
         <div className='w-screen md:w-auto'>
-          <div className='logo text-2xl'>ALL Net</div> {/* NOT a NavLink */}
+          <div className='logo text-2xl'><NavLink to='/'>ALL Net</NavLink> </div> {/* NOT a NavLink */}
         </div>
         <ul
           className={`menu ${menu ? `menu-open` : 'lg:text-lg'} ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}

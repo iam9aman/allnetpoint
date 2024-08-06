@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { context } from './context/context';
+import { Link } from 'react-router-dom';
 import online from '../Photos/online.png';
 import social from '../Photos/socialM.png';
 import driving from '../Photos/driving.png';          
@@ -18,18 +19,18 @@ import print from '../Photos/print.png';
 
 // Dummy data for the cards
 const cardData = [
-  { id: 1, image: online, title: 'Apply Jobs', link: '#contact' },
-  { id: 2, image: driving, title: 'Apply driving licence', link: '#contact' },
-  { id: 3, image: passport, title: 'Apply Passport', link: '#contact' },
-  { id: 4, image: box, title: 'Courier Packaging', link: '#contact' },
-  { id: 5, image: train, title: 'Book train-tickets', link: '#contact' },
-  { id: 6, image: air, title: 'Book air-tickets', link: '#contact' },
-  { id: 7, image: health, title: 'Health Insurance', link: '#contact' },
-  { id: 8, image: vehicle, title: 'Vehicle Insurance', link: '#contact' },
-  { id: 9, image: pan, title: 'Apply Pan card', link: '#contact' },
-  { id: 10, image: itr, title: 'Online ITR Filing', link: '#contact' },
-  { id: 11, image: plate, title: 'Apply number plate', link: '#contact' },
-  { id: 12, image: print, title: 'Print/copy/scan documents', link: '#contact' },
+  { id: 1, image: online, title: 'Apply Jobs' },
+  { id: 2, image: driving, title: 'Apply driving licence' },
+  { id: 3, image: passport, title: 'Apply Passport'},
+  { id: 4, image: box, title: 'Courier Packaging'},
+  { id: 5, image: train, title: 'Book train-tickets'},
+  { id: 6, image: air, title: 'Book air-tickets'},
+  { id: 7, image: health, title: 'Health Insurance'},
+  { id: 8, image: vehicle, title: 'Vehicle Insurance' },
+  { id: 9, image: pan, title: 'Apply Pan card' },
+  { id: 10, image: itr, title: 'Online ITR Filing'},
+  { id: 11, image: plate, title: 'Apply number plate' },
+  { id: 12, image: print, title: 'Print/copy/scan documents' },
 ];
 
 // Define different animation variants for different cards
@@ -133,12 +134,12 @@ ScrollToTop()
                 <img src={card.image} className='w-24 h-24' alt={card.title} />
                 <p className="text-lg font-semibold">{card.title}</p>
               </div>
-              <a
-                href={card.link}
+              <Link 
+              to='/contact'
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
               >
                 Contact Us
-              </a>
+              </Link>
             </motion.div>
           );
         })}

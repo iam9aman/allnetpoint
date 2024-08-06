@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { context } from './context/context';
+import { Link } from 'react-router-dom';
 import visa from '../Photos/visa.png';
 import social from '../Photos/socialM.png';
 import graphic from '../Photos/graphic.png';          
@@ -15,15 +16,15 @@ import plus from '../Photos/plus.png';
 
 // Dummy data for the cards
 const cardData = [
-  { id: 1, image: visa, title: 'Visa Appointments', link: '#contact' },
-  { id: 2, image: graphic, title: 'Graphic Designing', link: '#contact' },
-  { id: 3, image: socialme, title: 'Social media handling', link: '#contact' },
-  { id: 4, image: camera, title: 'Photo-shoots', link: '#contact' },
-  { id: 5, image: video, title: 'Video Editing', link: '#contact' },
-  { id: 6, image: wed, title: 'Customized wedding designs', link: '#contact' },
-  { id: 7, image: menu, title: 'Customized Menu designs', link: '#contact' },
-  { id: 8, image: poster, title: 'Customized posters', link: '#contact' },
-  { id: 9, image: plus, title: 'Many more...', link: '#contact' },
+  { id: 1, image: visa, title: 'Visa Appointments' },
+  { id: 2, image: graphic, title: 'Graphic Designing'},
+  { id: 3, image: socialme, title: 'Social media handling'},
+  { id: 4, image: camera, title: 'Photo-shoots'},
+  { id: 5, image: video, title: 'Video Editing'},
+  { id: 6, image: wed, title: 'Customized wedding designs' },
+  { id: 7, image: menu, title: 'Customized Menu designs'},
+  { id: 8, image: poster, title: 'Customized posters'},
+  { id: 9, image: plus, title: 'Many more...'},
 
 ];
 
@@ -128,12 +129,12 @@ ScrollToTop()
                 <img src={card.image} className='w-24 h-24' alt={card.title} />
                 <p className="text-lg font-semibold">{card.title}</p>
               </div>
-              <a
-                href={card.link}
+              <Link
+                to='/contact'
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
               >
                 Contact Us
-              </a>
+              </Link>
             </motion.div>
           );
         })}
